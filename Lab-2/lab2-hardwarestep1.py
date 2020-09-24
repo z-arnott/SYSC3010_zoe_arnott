@@ -1,7 +1,7 @@
-import sense_hat
+import sense_emu
 import random
 
-s = sense_hat.SenseHat()
+s = sense_emu.SenseHat()
 s.clear()
 
 purple = (184, 0, 235)
@@ -10,7 +10,9 @@ orange = (252, 140, 3)
 green = (0, 255, 17)
 black = (0, 0, 0)
 
-def letter_Z(color):
+
+# Lights necessary LEDs in LED matrix to form a letter 'Z' in chosen color
+def letter_z(color):
     Y = color
     O = black
     Z = [
@@ -25,7 +27,9 @@ def letter_Z(color):
     ]
     return Z
 
-def letter_A(color):
+
+# Lights necessary LEDs in LED matrix to form a letter 'A' in specified color
+def letter_a(color):
     Y = color
     O = black
     A = [
@@ -40,15 +44,17 @@ def letter_A(color):
     ]
     return A
 
+
 colors = [purple, blue, orange, green]
-letters = [letter_A, letter_Z]
+letters = [letter_a, letter_z]
 i = 0
 
 while True:
-  s.set_pixels(letters[i](colors[0]))
-  events = s.stick.get_events()
-  for e in events:
-    if e.action == sense_hat.ACTION_PRESSED:
-      random.shuffle(colors)
-      i = int(not bool(i))
-    
+    s.set_pixels(letters[i](colors[0]))
+    events = s.stick.get_events()
+    for e in events:
+        if e.action == sense_emu.ACTION_PRESSED:
+            # change LEDs to random color
+            random.shuffle(colors)
+            # toggle letters
+            i = int(not bool(i))
