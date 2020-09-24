@@ -53,7 +53,7 @@ while True:
     s.set_pixels(letters[i](colors[0]))
     events = s.stick.get_events()
     for e in events:
-        if e.action == sense_hat.ACTION_PRESSED:
+        if e.action == sense_emu.ACTION_PRESSED:
             # change LEDs to random color
             random.shuffle(colors)
             # toggle letters
