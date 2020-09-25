@@ -1,4 +1,5 @@
 # Powers and reads digital output from Soil Moisture YL69 with HL69 breakout board
+# Sensor is active low: 0 when soil moisture is above threshold, 1 when soil moisture is below threshold
 import RPi.GPIO as GPIO
 import time
 import httplib
