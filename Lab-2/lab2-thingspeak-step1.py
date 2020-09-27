@@ -15,6 +15,7 @@ for data in x:
     try:
         conn.request("POST", "/update", param)
         response = conn.getresponse()
+        print (response.status, response.reason)
         conn.close()
     except:
         print("failed")
