@@ -1,4 +1,4 @@
-# Requests trend from Google Trends and posts it to ThingSpeak channel
+# POST simulated ECG data to ThingSpeak channel
 import httplib
 import urllib
 import time
