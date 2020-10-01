@@ -52,3 +52,7 @@ create_sensor(conn, (temperature, kitchen))
 create_sensor(conn, (door, garage))
 create_sensor(conn, (motion, garage))
 create_sensor(conn, (temperature, garage))
+print(cursor.fetchall())
+
+conn.commit()
+conn.close()
