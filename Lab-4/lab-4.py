@@ -3,7 +3,7 @@ import httplib
 import urllib
 
 cmail = "zoe.arnott@carleton.ca"
-project_group = "L2-M-2"
+project_group = "L2-M-3"
 identifier = "b"
 key = "54CDA6FJF4RCJ92C"
 
