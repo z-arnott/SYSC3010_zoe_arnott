@@ -1,4 +1,4 @@
-# POST simulated ECG data to ThingSpeak channel
+# POST student information to Lab Thingspeak channel
 import httplib
 import urllib
 
