@@ -48,7 +48,7 @@ conn = sqlite3.connect("my.db")
 cursor = conn.cursor()
 
 # create new table in database
-cursor.execute("CREATE TABLE IF NOT EXISTS  sensors(sensorID INTEGER PRIMARY KEY, type TEXT, zone TEXT)")
+cursor.execute("CREATE TABLE sensors(sensorID INTEGER PRIMARY KEY, type TEXT, zone TEXT)")
 
 # Add rows to sensors table
 create_sensor(conn, ("door", "kitchen"))
