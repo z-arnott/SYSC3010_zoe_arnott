@@ -54,5 +54,7 @@ cursor.execute("CREATE TABLE IF NOT EXISTS weather (id INTEGER PRIMARY KEY, city
 # insert data into table
 values = (city, temperature , humidity, pressure, current["speed"])
 cursor.execute("INSERT INTO weather(city, temperature, humidity, pressure, wind) VALUES(?,?,?,?,?)", values)
+for row in cursor.execute('SELECT * FROM weather'):
+    print(row)
 conn.commit()
 conn.close()
