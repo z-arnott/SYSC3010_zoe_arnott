@@ -11,8 +11,9 @@ data_x = [40, 38, 42, 43, 44, 45, 44, 43, 42,41, 40, 40, 40, 40, 40, 39, 42, 43,
 for x in data_x:
 
     try:
-        r = requests.post("https://api.thingspeak.com/update?api_key=D222ZGCJNCGK29TD&field1={x}")
-        print (r.status_code)
+        url = "https://api.thingspeak.com/update?api_key=D222ZGCJNCGK29TD&field2=" + str(x)
+        r = requests.post(url)
+        print(x, r.status_code)
     except:
         print("failed")
     # Delay next POST request for 15 seconds, min update interval on ThingSpeak
